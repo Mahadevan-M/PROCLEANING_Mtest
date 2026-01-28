@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCleaning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .hero {
+            background: url("Hero\ Iamge.svg") center/cover no-repeat;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: #555;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #198754;
+            color: #fff;
+            border-color: #198754;
+        }
+
+        .service-card {
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .team-card {
+            background: #eafaf1;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-card i {
+            cursor: pointer;
+            color: #333;
+        }
+
+        .team-card i:hover {
+            color: #198754;
+        }
+
+        .pricing-section {
+            background: linear-gradient(rgba(25, 135, 84, .95), rgba(25, 135, 84, .95)),
+                url("images/pricing-bg.jpg") center/cover no-repeat;
+        }
+
+        .price-card {
+            background: #fff;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .price-card.active {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .testimonial-card {
+            border: 2px solid #198754;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .testimonial-card::after {
+            content: "❝";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 60px;
+            color: #198754;
+            opacity: 0.2;
+        }
+
+        .blog-card {
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-6px);
+        }
+
+        .blog-card.active {
+            border: 2px solid #198754;
+        }
+
+        .contact-box {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f8f9fa;
+        }
+
+        .footer-section {
+            background: #0f1f17;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-success">Pro</span>Cleaning
+                <small class="d-block text-muted fs-6">Cleaning Services Company</small>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active text-success" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <a href="#" class="btn btn-success px-4">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-success fw-semibold">Quality cleaning at a fair price.</p>
+
+                    <h1 class="mb-3">
+                        Specialized, efficient <br>
+                        and thorough cleaning services
+                    </h1>
+
+                    <p class="mb-4">
+                        We provide professional cleaning services using the least
+                        amount of time, energy, and money.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-success px-4">Get Started</a>
+                        <a href="#" class="btn btn-outline-dark px-4">View All Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">We Always Provide The<br>Best Service</h2>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-muted">Services</h6>
+                    <p class="text-muted">
+                        While we can customize your cleaning plan to suit your needs,
+                        most clients schedule regular cleaning services.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card p-3 h-100">
+                        <img src="Image.svg" class="img-fluid rounded-4 mb-3">
+                        <h5>Office Cleaning</h5>
+                        <p class="text-muted small">
+                            While we can customize your cleaning plan to suit your needs,
+                            most clients schedule regular cleaning services.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">Book Now →</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-3 h-100">
+                        <img src="Image (1).svg" class="img-fluid rounded-4 mb-3">
+                        <h5>Spring Cleaning</h5>
+                        <p class="text-muted small">
+                            While we can customize your cleaning plan to suit your needs,
+                            most clients schedule regular cleaning services.
+                        </p>
+                        <a href="#" class="btn btn-success btn-sm">Book Now →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="service-card p-3 h-100 position-relative">
+                        <img src="Image (2).svg" class="img-fluid rounded-4 mb-3">
+                        <h5>House Cleaning</h5>
+                        <p class="text-muted small">
+                            While we can customize your cleaning plan to suit your needs,
+                            most clients schedule regular cleaning services.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">Book Now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quality Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <p class="text-success fw-semibold">Affordable cleaning solutions</p>
+                    <h2 class="fw-bold">
+                        High-Quality and Friendly <br>
+                        Services at Fair Prices
+                    </h2>
+                    <p class="text-muted">
+                        We provide comprehensive cleaning services tailored to your needs.
+                        From residential cleaning services to professional solutions.
+                    </p>
+                    <a href="#" class="btn btn-success px-4">Get a quote</a>
+                </div>
+
+                <!-- Image -->
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <div class="pg3imgcon position-relative">
+                        <img class="img-fluid" src="Image (3).svg" alt="">
+                        <img class="position-absolute top-50 start-0 translate-middle-x z-3" src="Image (4).svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Team Section -->
+    <section class="py-5">
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">
+                        Effective Cleaning Requires <br>
+                        an Expert Cleaning Team
+                    </h2>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-muted">Expert Team</h6>
+                    <p class="text-muted">
+                        We have professional expert cleaning staff ensuring
+                        top-notch cleanliness and hygiene for your space.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Cards -->
+            <div class="row g-4">
+                <!-- Card -->
+                <div class="col-md-4">
+                    <div class="team-card p-3 text-center">
+                        <img src="Image (5).svg" class="img-fluid rounded-4 mb-3">
+                        <h6 class="fw-bold">Erick Reynolds</h6>
+                        <div class="text-warning mb-2">★★★★★</div>
+                        <p class="text-muted small">
+                            He is an expert cleaning staff member who provides
+                            thorough cleaning with precision.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-x-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="col-md-4">
+                    <div class="team-card p-3 text-center">
+                        <img src="Image (6).svg" class="img-fluid rounded-4 mb-3">
+                        <h6 class="fw-bold">Erick Reynolds</h6>
+                        <div class="text-warning mb-2">★★★★★</div>
+                        <p class="text-muted small">
+                            He is an expert cleaning staff member who provides
+                            thorough cleaning with precision.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-x-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="col-md-4">
+                    <div class="team-card p-3 text-center">
+                        <img src="Image (7).svg" class="img-fluid rounded-4 mb-3">
+                        <h6 class="fw-bold">Erick Reynolds</h6>
+                        <div class="text-warning mb-2">★★★★★</div>
+                        <p class="text-muted small">
+                            He is an expert cleaning staff member who provides
+                            thorough cleaning with precision.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-x-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Images -->
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <!-- <div class="position-relative d-inline-block">
+          <img src="Image (9).svg" class="img-fluid rounded-4 border border-success border-3">
+          <img src="Image (8).svg"
+               class="position-absolute bottom-0 start-0 translate-middle"
+               style="width: 200px;">
+        </div> -->
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                        <div class="images5 position-relative">
+                            <img class="img-fluid" src="Image (8).svg" alt="">
+                            <img class="position-absolute top-50 translate-middle-x z-3" src="Image (9).svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Welcome To Our <br>Pro-Cleaning Company!</h2>
+                    <p class="text-muted">
+                        We make your space shine! Professional and reliable cleaning
+                        service company providing top-notch solutions for homes and
+                        businesses. Satisfaction guaranteed!
+                    </p>
+
+                    <div class="row mb-3">
+                        <div class="col-6 mb-2">✔ Vetted professionals</div>
+                        <div class="col-6 mb-2">✔ Affordable prices</div>
+                        <div class="col-6 mb-2">✔ Next day availability</div>
+                        <div class="col-6 mb-2">✔ Best quality</div>
+                        <div class="col-6 mb-2">✔ Standard Cleaning tasks</div>
+                        <div class="col-6 mb-2">✔ Affordable Prices</div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-success px-4">Book Now</a>
+                        <a href="#" class="btn btn-outline-dark px-4">Know More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section py-5 text-white">
+        <div class="container text-center">
+
+            <p class="small">Our Pricing</p>
+            <h2 class="fw-bold mb-4">
+                Choose From Our Lowest <br>Plans and Prices
+            </h2>
+
+            <!-- Toggle Buttons (UI only) -->
+            <div class="d-inline-flex bg-white rounded-pill p-1 mb-5">
+                <button class="btn btn-success rounded-pill px-4">Monthly</button>
+                <button class="btn btn-light rounded-pill px-4">Yearly</button>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="row g-4">
+                <!-- Basic -->
+                <div class="col-md-4">
+                    <div class="price-card p-4 text-dark">
+                        <h6 class="fw-bold">BASIC PACKAGE</h6>
+                        <h3 class="text-success fw-bold">$59.00 <small>/Monthly</small></h3>
+                        <ul class="list-unstyled my-4 small">
+                            <li>✔ Dusting of all surfaces</li>
+                            <li>✔ Sweeping and mopping floors</li>
+                            <li>✔ Vacuuming carpets and rugs</li>
+                            <li>✔ Cleaning kitchen surfaces</li>
+                            <li>✔ Emptying trash bins</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-dark w-100">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="col-md-4">
+                    <div class="price-card active p-4 text-dark">
+                        <h6 class="fw-bold">ENTERPRISE PACKAGE</h6>
+                        <h3 class="text-success fw-bold">$69.00 <small>/Monthly</small></h3>
+                        <ul class="list-unstyled my-4 small">
+                            <li>✔ All services in Basic Plan</li>
+                            <li>✔ Detailed dusting</li>
+                            <li>✔ Wiping kitchen appliances</li>
+                            <li>✔ Changing bed linens</li>
+                            <li>✔ Spot cleaning walls & doors</li>
+                        </ul>
+                        <a href="#" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="col-md-4">
+                    <div class="price-card p-4 text-dark">
+                        <h6 class="fw-bold">PREMIUM PACKAGE</h6>
+                        <h3 class="text-success fw-bold">$99.00 <small>/Monthly</small></h3>
+                        <ul class="list-unstyled my-4 small">
+                            <li>✔ Deep kitchen cleaning</li>
+                            <li>✔ Carpet & upholstery cleaning</li>
+                            <li>✔ Closet organization</li>
+                            <li>✔ Detailed bathroom cleaning</li>
+                            <li>✔ Baseboards & vents</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-dark w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Feedback About Their <br>Experience With Us</h2>
+                    <p class="text-muted">
+                        Read testimonials from our satisfied clients.
+                        See how our cleaning services have made a difference
+                        in their lives and homes.
+                    </p>
+
+                    <div class="d-flex gap-3 mt-3">
+                        <button class="btn btn-outline-success rounded-circle">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="btn btn-success rounded-circle">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card -->
+                <div class="col-md-6">
+                    <div class="testimonial-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Image (10).svg" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h6 class="mb-0">Robert Fox</h6>
+                                <small class="text-muted">Business Man</small>
+                            </div>
+                        </div>
+
+                        <div class="text-warning mb-2">★★★★★</div>
+
+                        <p class="text-muted">
+                            Excellent service! The team was punctual, thorough,
+                            and left my home sparkling clean. Highly recommend
+                            for anyone needing reliable and detailed cleaning service.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Stay Updated with Our<br>Tips & Service News!</h2>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-muted">Our Blog</h6>
+                    <p class="text-muted">
+                        Stay informed with our latest cleaning tips, service updates,
+                        expert advice on maintaining an immaculate home.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Blog Card -->
+                <div class="col-md-4">
+                    <div class="blog-card p-3 h-100">
+                        <img src="Image (11).svg" class="img-fluid rounded-4 mb-3 mx-auto d-block">
+
+                        <small class="text-muted">JOHN HELTON · JAN 6, 2025</small>
+                        <h6 class="fw-bold mt-2">Eco-Friendly Cleaning: How We Keep Your Home Green</h6>
+                        <p class="text-muted small">
+                            Learn how our commitment to eco-friendly practices ensures
+                            a healthier environment.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog-card p-3 h-100 active">
+                        <img src="Image (12).svg" class="img-fluid rounded-4 mb-3 mx-auto d-block">
+                        <small class="text-muted">JOHN HELTON · JAN 6, 2025</small>
+                        <h6 class="fw-bold mt-2">How to Maintain a Clean Home Between Professional Visits</h6>
+                        <p class="text-muted small">
+                            Get practical advice on maintaining cleanliness between visits.
+                        </p>
+                        <a href="#" class="btn btn-success btn-sm">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog-card p-3 h-100">
+                        <img src="Image (13).svg" class="img-fluid rounded-4 mb-3 mx-auto d-block">
+                        <small class="text-muted">JOHN HELTON · JAN 6, 2025</small>
+                        <h6 class="fw-bold mt-2">The Benefits of Regular Professional Cleaning</h6>
+                        <p class="text-muted small">
+                            Understand the long-term advantages of scheduled cleaning.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Find Us -->
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-4">Find us</h4>
+
+                    <div class="contact-box mb-3">
+                        <i class="fas fa-phone-alt text-success"></i>
+                        <div>
+                            <strong>Call Us</strong><br>
+                            +02 985 201 8888
+                        </div>
+                    </div>
+
+                    <div class="contact-box mb-3">
+                        <i class="fas fa-envelope text-success"></i>
+                        <div>
+                            <strong>Email Now</strong><br>
+                            hello@procleaning.com
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <i class="fas fa-map-marker-alt text-success"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            7510, Brand Tower, New York, USA
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <h6 class="text-muted">Contact Info</h6>
+                    <h4 class="fw-bold mb-3">Keep In Touch</h4>
+
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Name">
+                        <input type="email" class="form-control mb-3" placeholder="Email">
+                        <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+                        <button class="btn btn-success px-4">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <h5><span class="text-success">Pro</span>Cleaning</h5>
+                    <p class="small">
+                        Stay updated with our latest cleaning tips, service updates,
+                        and helpful articles on maintaining a spotless home.
+                    </p>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled small">
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Our Team</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Know More</h6>
+                    <ul class="list-unstyled small">
+                        <li>Support</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Conditions</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Newsletter</h6>
+                    <input type="email" class="form-control mb-2" placeholder="Email Goes Here">
+                    <button class="btn btn-success btn-sm">Send</button>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary mt-4">
+            <p class="text-center small mb-0 pb-3">
+                2024 “ProCleaning” All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
